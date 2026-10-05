@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f2f5fa;
+  --color-navy-100: #e1e8f2;
+  --color-navy-200: #c3d0e4;
+  --color-navy-400: #6a82a8;
+  --color-navy-600: #2c4a7c;
+  --color-navy-700: #1f3a66;
+  --color-navy-800: #172c4f;
+  --color-navy-900: #0f1f3a;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Pop effect for skill bubbles (created in Skills.tsx) */
+.bubble-burst {
+  position: absolute;
+  width: var(--burst-size);
+  height: var(--burst-size);
+  translate: -50% -50%;
+  pointer-events: none;
+  z-index: 30;
+  border: 3px solid var(--burst-color);
+  border-radius: 9999px;
+  animation: bubble-ring 400ms ease-out forwards;
+}
+
+.bubble-burst span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px;
+  border-radius: 9999px;
+  background: var(--burst-color);
+  animation: bubble-drop 500ms ease-out forwards;
+}
+
+@keyframes bubble-ring {
+  from { scale: 0.8; opacity: 1; }
+  to { scale: 1.5; opacity: 0; }
+}
+
+@keyframes bubble-drop {
+  from { transform: translate(0, 0); opacity: 1; }
+  to { transform: translate(var(--dx), var(--dy)); opacity: 0; }
+}
+
+@layer base {
+  html {
+    @apply bg-white text-navy-900 antialiased;
+  }
+}
