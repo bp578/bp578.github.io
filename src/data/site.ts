@@ -31,6 +31,19 @@ export type Project = {
   href: string;
 };
 
+export type Experience = {
+  /** Year shown on the timeline node. */
+  year: number;
+  title: string;
+  organization: string;
+  dates: string;
+  description: string[];
+  /** Square logo under /public, shown on the timeline node. */
+  logo: string;
+  /** Path under /public, e.g. "/experience/emoney.png" */
+  image: string;
+};
+
 export type Skill = {
   name: string;
   icon: IconType;
@@ -108,5 +121,59 @@ export const projects: Project[] = [
       "A short description of the project, what it does, and the tech used to build it.",
     thumbnail: "/projects/placeholder.svg",
     href: "https://bp578.itch.io",
+  },
+];
+
+// Timeline order (oldest first). Swap the placeholder images for real ones.
+export const experiences: Experience[] = [
+  {
+    year: 2021,
+    title: "B.S. Computer Science",
+    organization: "Drexel University",
+    dates: "September 2021 – June 2026",
+    description: [
+      "Graduated magna cum laude with a 3.80 GPA from the School of Computing and Informatics.",
+      "Senior design: led the quest system architecture for Player 2, a gamified matchmaking app, and built 15+ Java/Spring Boot REST endpoints for quests and badges.",
+    ],
+    logo: "/experience/drexel.png",
+    image: "/projects/placeholder.svg",
+  },
+  {
+    year: 2023,
+    title: "Software Developer",
+    organization: "WebstaurantStore · IDS",
+    dates: "September 2023 – March 2024",
+    description: [
+      "Helped retire the legacy IDS ERP by migrating 5 core features to a React, TypeScript, and .NET stack.",
+      "Improved stability for hundreds of users by resolving 30+ defects across C# and SQL Server backend logic.",
+    ],
+    logo: "/experience/webstaurantstore.png",
+    image: "/projects/placeholder.svg",
+  },
+  {
+    year: 2024,
+    title: "Software Developer",
+    organization: "WebstaurantStore · Broker",
+    dates: "September 2024 – March 2025",
+    description: [
+      "Delivered 7 features end-to-end for Broker, an internal messaging app, with reusable Blazor and TypeScript components wired to 15+ C#/.NET API endpoints.",
+      "Cut bulk data updates from ~3 hours to under a minute with Python scripts that update 1,000+ records per run.",
+      "Shipped every new frontend feature with bUnit test coverage to catch UI regressions before release.",
+    ],
+    logo: "/experience/webstaurantstore.png",
+    image: "/projects/placeholder.svg",
+  },
+  {
+    year: 2025,
+    title: "Software Engineer",
+    organization: "eMoney Advisor",
+    dates: "September 2025 – September 2026",
+    description: [
+      "Built an AI-powered analysis tool on Anthropic's Claude API that detects anomaly trends across institution subscriptions, exposing 50+ hidden parser defects.",
+      "Added ~20 new financial institutions by building C# parsers from scratch, reverse-engineering their web traffic with Fiddler.",
+      "Resolved 70+ production defects and maintained 30+ scrapers and parsers that keep account data accurate for 5,000+ clients.",
+    ],
+    logo: "/experience/emoney.png",
+    image: "/projects/placeholder.svg",
   },
 ];
