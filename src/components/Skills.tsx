@@ -17,14 +17,14 @@ const REST_SPEED = 0.02;
 const PACK_GAP = 6;
 
 // Size changes (fractions are of the bubble's base radius)
-const HOLD_DELAY = 2000; // ms held still before shrinking starts
+const HOLD_DELAY = 200; // ms held still before shrinking starts
 const HOLD_SLOP = 8; // px the pointer may wander and still count as holding
 const SHRINK_RATE = 0.6; // per second
 const SHRINK_POP = 0.3; // pops at this size
 const TAP_MAX_MS = 250;
 const TAP_GROWTH = 0.2; // per tap
-const MAX_GROWTH = 2.2; // pops at this size
-const RELAX_DELAY = 600; // ms after the last tap/release before returning to base size
+const MAX_GROWTH = 4; // pops at this size
+const RELAX_DELAY = 4000; // ms after the last tap/release before returning to base size
 const RESPAWN_DELAY = 4000;
 const POP_PUSH = 28; // px per frame at the popped bubble's edge
 
