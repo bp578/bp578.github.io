@@ -92,35 +92,27 @@ export const skills: Skill[] = [
   { name: "Blazor", icon: SiBlazor, size: "sm", color: "#512BD4", iconColor: "#FFFFFF" },
 ];
 
-// Placeholder projects — replace with real entries.
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "Gladius Unus",
     description:
-      "A short description of the project, what it does, and the tech used to build it.",
-    thumbnail: "/projects/placeholder.svg",
-    href: "https://github.com/bp578",
+      "Souls-like prototype game built in Unity. Fight for your freedom as a nameless prisoner. Features challenging melee combat with a focus on highly committal animations.",
+    thumbnail: "/projects/gladius_unus.png",
+    href: "https://bp578.itch.io/gladius-unus",
   },
   {
-    title: "Project Two",
+    title: "FPS Arena Survivor",
     description:
-      "A short description of the project, what it does, and the tech used to build it.",
-    thumbnail: "/projects/placeholder.svg",
-    href: "https://github.com/bp578",
+      "First-person shooter arena survival game built in Unity. Fight for your life as you try to survive against as many enemies as possible. Collect powerups from fallen foes that infinitely stack and gain inhuman strength.",
+    thumbnail: "/projects/fps_arena_survivor.png",
+    href: "https://bp578.itch.io/fps-arena-survivor",
   },
   {
-    title: "Project Three",
+    title: "Player 2",
     description:
-      "A short description of the project, what it does, and the tech used to build it.",
-    thumbnail: "/projects/placeholder.svg",
-    href: "https://bp578.itch.io",
-  },
-  {
-    title: "Project Four",
-    description:
-      "A short description of the project, what it does, and the tech used to build it.",
-    thumbnail: "/projects/placeholder.svg",
-    href: "https://bp578.itch.io",
+      "Player 2 is a social networking and team-building app for gamers, powered by AI matchmaking. Played a key role in implementing gamification by adding quests and rewards in order to keep users engaged and motivated to play more.",
+    thumbnail: "/projects/player2.webp",
+    href: "https://player2app.com",
   },
 ];
 
@@ -136,7 +128,7 @@ export const experiences: Experience[] = [
       "Senior design: led the quest system architecture for Player 2, a gamified matchmaking app, and built 15+ Java/Spring Boot REST endpoints for quests and badges.",
     ],
     logo: "/experience/drexel.png",
-    image: "/projects/placeholder.svg",
+    image: "/experience/graduation.jpg",
   },
   {
     year: 2023,
@@ -148,7 +140,7 @@ export const experiences: Experience[] = [
       "Improved stability for hundreds of users by resolving 30+ defects across C# and SQL Server backend logic.",
     ],
     logo: "/experience/webstaurantstore.png",
-    image: "/projects/placeholder.svg",
+    image: "/experience/webstaurantstore-ids.svg",
   },
   {
     year: 2024,
@@ -161,7 +153,7 @@ export const experiences: Experience[] = [
       "Shipped every new frontend feature with bUnit test coverage to catch UI regressions before release.",
     ],
     logo: "/experience/webstaurantstore.png",
-    image: "/projects/placeholder.svg",
+    image: "/experience/webstaurantstore-broker.svg",
   },
   {
     year: 2025,
@@ -174,6 +166,6 @@ export const experiences: Experience[] = [
       "Resolved 70+ production defects and maintained 30+ scrapers and parsers that keep account data accurate for 5,000+ clients.",
     ],
     logo: "/experience/emoney.png",
-    image: "/projects/placeholder.svg",
+    image: "/experience/emoney.svg",
   },
 ];

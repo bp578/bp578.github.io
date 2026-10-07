@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Segoe UI, Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1f8ef"/>
+      <stop offset="1" stop-color="#dcefd7"/>
+    </linearGradient>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0f3d0f" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <image href="data:image/png;base64,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" x="70" y="52" width="84" height="84"/>
+  <text x="176" y="92" font-size="38" font-weight="700" fill="#14431a">WebstaurantStore · Broker</text>
+  <text x="176" y="128" font-size="24" fill="#3f6b44">Frontend development · Blazor · TypeScript · bUnit</text>
+
+  <!-- Code editor -->
+  <g filter="url(#sh)">
+    <rect x="70" y="190" width="720" height="620" rx="18" fill="#1e1f22"/>
+    <path d="M70 208a18 18 0 0 1 18-18h684a18 18 0 0 1 18 18v38H70z" fill="#2b2d31"/>
+  </g>
+  <circle cx="98" cy="218" r="7" fill="#f2655a"/>
+  <circle cx="122" cy="218" r="7" fill="#f6bf4f"/>
+  <circle cx="146" cy="218" r="7" fill="#5bc35b"/>
+  <rect x="176" y="200" width="230" height="46" fill="#1e1f22"/>
+  <rect x="176" y="200" width="230" height="3" fill="#5bc35b"/>
+  <text x="196" y="230" font-size="16" fill="#e6e6e6">MessageThread.razor</text>
+  <text x="430" y="230" font-size="16" fill="#8b8f96">ThreadTests.cs</text>
+
+  <g font-family="Consolas, Menlo, monospace" font-size="20">
+    <g fill="#5c6068" text-anchor="end">
+      <text x="122" y="290">1</text><text x="122" y="322">2</text><text x="122" y="354">3</text>
+      <text x="122" y="386">4</text><text x="122" y="418">5</text><text x="122" y="450">6</text>
+      <text x="122" y="482">7</text><text x="122" y="514">8</text><text x="122" y="546">9</text>
+      <text x="122" y="578">10</text><text x="122" y="610">11</text><text x="122" y="642">12</text>
+      <text x="122" y="674">13</text><text x="122" y="706">14</text><text x="122" y="738">15</text>
+      <text x="122" y="770">16</text>
+    </g>
+    <text x="146" y="290"><tspan fill="#c586c0">@inject</tspan><tspan fill="#4ec9b0"> IBrokerApi</tspan><tspan fill="#9cdcfe"> Api</tspan></text>
+    <text x="146" y="354"><tspan fill="#808080">&lt;</tspan><tspan fill="#4ec9b0">ThreadHeader</tspan><tspan fill="#9cdcfe"> Title</tspan><tspan fill="#d4d4d4">=</tspan><tspan fill="#ce9178">"@Thread.Name"</tspan><tspan fill="#808080"> /&gt;</tspan></text>
+    <text x="146" y="386"><tspan fill="#808080">&lt;</tspan><tspan fill="#569cd6">ul</tspan><tspan fill="#9cdcfe"> class</tspan><tspan fill="#d4d4d4">=</tspan><tspan fill="#ce9178">"messages"</tspan><tspan fill="#808080">&gt;</tspan></text>
+    <text x="170" y="418"><tspan fill="#c586c0">@foreach</tspan><tspan fill="#d4d4d4"> (</tspan><tspan fill="#569cd6">var</tspan><tspan fill="#9cdcfe"> msg </tspan><tspan fill="#c586c0">in</tspan><tspan fill="#9cdcfe"> Messages</tspan><tspan fill="#d4d4d4">)</tspan></text>
+    <text x="170" y="450" fill="#d4d4d4">{</text>
+    <text x="194" y="482"><tspan fill="#808080">&lt;</tspan><tspan fill="#4ec9b0">MessageBubble</tspan><tspan fill="#9cdcfe"> Message</tspan><tspan fill="#d4d4d4">=</tspan><tspan fill="#ce9178">"msg"</tspan><tspan fill="#808080"> /&gt;</tspan></text>
+    <text x="170" y="514" fill="#d4d4d4">}</text>
+    <text x="146" y="546"><tspan fill="#808080">&lt;/</tspan><tspan fill="#569cd6">ul</tspan><tspan fill="#808080">&gt;</tspan></text>
+    <text x="146" y="578"><tspan fill="#808080">&lt;</tspan><tspan fill="#4ec9b0">Composer</tspan><tspan fill="#9cdcfe"> OnSend</tspan><tspan fill="#d4d4d4">=</tspan><tspan fill="#ce9178">"SendAsync"</tspan><tspan fill="#808080"> /&gt;</tspan></text>
+    <text x="146" y="642"><tspan fill="#c586c0">@code</tspan><tspan fill="#d4d4d4"> {</tspan></text>
+    <text x="170" y="674"><tspan fill="#569cd6">async</tspan><tspan fill="#4ec9b0"> Task</tspan><tspan fill="#dcdcaa"> SendAsync</tspan><tspan fill="#d4d4d4">(</tspan><tspan fill="#569cd6">string</tspan><tspan fill="#9cdcfe"> text</tspan><tspan fill="#d4d4d4">)</tspan></text>
+    <text x="194" y="706"><tspan fill="#d4d4d4">=&gt; </tspan><tspan fill="#c586c0">await</tspan><tspan fill="#9cdcfe"> Api</tspan><tspan fill="#d4d4d4">.</tspan><tspan fill="#dcdcaa">PostMessage</tspan><tspan fill="#d4d4d4">(Thread.Id, text);</tspan></text>
+    <text x="146" y="738" fill="#d4d4d4">}</text>
+    <rect x="160" y="752" width="11" height="24" fill="#aeafad"/>
+  </g>
+
+  <!-- Rendered chat UI -->
+  <g filter="url(#sh)">
+    <rect x="840" y="170" width="690" height="660" rx="18" fill="#ffffff"/>
+  </g>
+  <path d="M840 188a18 18 0 0 1 18-18h162v660H858a18 18 0 0 1-18-18z" fill="#14431a"/>
+  <text x="866" y="222" font-size="24" font-weight="700" fill="#ffffff">Broker</text>
+  <g font-size="16">
+    <rect x="856" y="252" width="148" height="36" rx="8" fill="#2a8c25"/>
+    <text x="872" y="276" fill="#ffffff" font-weight="600"># purchasing</text>
+    <text x="872" y="324" fill="#a9cfa6"># warehouse</text>
+    <text x="872" y="364" fill="#a9cfa6"># vendors</text>
+    <text x="872" y="404" fill="#a9cfa6"># support</text>
+  </g>
+
+  <text x="1050" y="220" font-size="22" font-weight="700" fill="#14431a"># purchasing</text>
+  <line x1="1020" y1="246" x2="1530" y2="246" stroke="#e6ebe6" stroke-width="2"/>
+
+  <!-- messages -->
+  <circle cx="1068" cy="296" r="20" fill="#7fbf7a"/>
+  <rect x="1100" y="276" width="300" height="64" rx="16" fill="#f0f4f0"/>
+  <rect x="1118" y="294" width="200" height="12" rx="6" fill="#9db29f"/>
+  <rect x="1118" y="316" width="250" height="12" rx="6" fill="#c3d2c4"/>
+
+  <rect x="1180" y="366" width="300" height="64" rx="16" fill="#2a8c25"/>
+  <rect x="1198" y="384" width="230" height="12" rx="6" fill="#bfe8bb"/>
+  <rect x="1198" y="406" width="160" height="12" rx="6" fill="#8fd18a"/>
+
+  <circle cx="1068" cy="476" r="20" fill="#e8b05a"/>
+  <rect x="1100" y="456" width="340" height="94" rx="16" fill="#f0f4f0"/>
+  <rect x="1118" y="474" width="280" height="12" rx="6" fill="#9db29f"/>
+  <rect x="1118" y="496" width="300" height="12" rx="6" fill="#c3d2c4"/>
+  <rect x="1118" y="518" width="180" height="12" rx="6" fill="#c3d2c4"/>
+
+  <rect x="1240" y="576" width="240" height="64" rx="16" fill="#2a8c25"/>
+  <rect x="1258" y="594" width="190" height="12" rx="6" fill="#bfe8bb"/>
+  <rect x="1258" y="616" width="120" height="12" rx="6" fill="#8fd18a"/>
+
+  <!-- composer -->
+  <rect x="1046" y="752" width="460" height="54" rx="27" fill="#f4f6f4" stroke="#dfe7df" stroke-width="2"/>
+  <text x="1074" y="786" font-size="17" fill="#8a9a8b">Message #purchasing</text>
+  <circle cx="1478" cy="779" r="20" fill="#2a8c25"/>
+  <path d="M1470 770l18 9-18 9v-6l10-3-10-3z" fill="#ffffff"/>
+
+  <!-- test badge -->
+  <g filter="url(#sh)">
+    <rect x="600" y="752" width="300" height="64" rx="32" fill="#ffffff"/>
+  </g>
+  <circle cx="636" cy="784" r="18" fill="#2a8c25"/>
+  <path d="M627 784l7 7 12-14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="666" y="791" font-size="19" font-weight="700" fill="#14431a">bUnit tests passing</text>
+</svg>
