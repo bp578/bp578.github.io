@@ -153,6 +153,7 @@ export const experiences: Experience[] = [
     dates: "September 2021 – June 2026",
     description: [
       "Graduated magna cum laude with a 3.80 GPA from the School of Computing and Informatics.",
+      "Studied the Software Engineering and Artificial Intelligence tracks while taking game development classes on the side",
       "Senior design: led the quest system architecture for Player 2, a gamified matchmaking app, and built 15+ Java/Spring Boot REST endpoints for quests and badges.",
     ],
     logo: "/experience/drexel.png",

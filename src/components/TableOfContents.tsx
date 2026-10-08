@@ -2,34 +2,39 @@
 
 import { useEffect, useState } from "react";
 
-// Page order; ids match each section's id attribute.
-const SECTIONS = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
-];
+type Section = { id: string; label: string };
 
 // A section becomes active once its top passes this fraction of the viewport.
 const ACTIVE_LINE = 0.4;
 
 export default function TableOfContents() {
+  const [sections, setSections] = useState<Section[]>([]);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
+    // Every <section id="..."> on the page, in page order; the label is the id
+    // capitalized ("projects" -> "Projects").
+    const els = Array.from(
+      document.querySelectorAll<HTMLElement>("main section[id]"),
+    );
+    setSections(
+      els.map(({ id }) => ({
+        id,
+        label: id.charAt(0).toUpperCase() + id.slice(1),
+      })),
+    );
+
     const update = () => {
       const line = window.innerHeight * ACTIVE_LINE;
       let next = 0;
-      SECTIONS.forEach(({ id }, i) => {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= line) next = i;
+      els.forEach((el, i) => {
+        if (el.getBoundingClientRect().top <= line) next = i;
       });
       // The last section may be too short to reach the line.
       const atBottom =
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 2;
-      setActive(atBottom ? SECTIONS.length - 1 : next);
+      setActive(atBottom ? els.length - 1 : next);
     };
     update();
     window.addEventListener("scroll", update, { passive: true });
@@ -41,7 +46,8 @@ export default function TableOfContents() {
   }, []);
 
   const onHero = active === 0;
-  const progress = (active / (SECTIONS.length - 1)) * 100;
+  const progress =
+    sections.length > 1 ? (active / (sections.length - 1)) * 100 : 0;
 
   return (
     <nav
@@ -76,7 +82,7 @@ export default function TableOfContents() {
           </div>
 
           <ol className="relative">
-            {SECTIONS.map(({ id, label }, i) => {
+            {sections.map(({ id, label }, i) => {
               const selected = i === active;
               const reached = i <= active;
               return (
