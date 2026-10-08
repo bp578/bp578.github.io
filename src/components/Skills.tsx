@@ -4,10 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { skills, type Skill } from "@/data/site";
 
 // Bubble diameters (px) at full scale.
-const DIAMETER = { lg: 120, md: 92, sm: 68 } as const;
-
-// Unlabelled filler bubbles that round out the circle.
-const PLACEHOLDER_DIAMETERS = [56, 44, 56, 44, 44, 56, 44, 56, 44, 44];
+const DIAMETER = { lg: 150, md: 75, sm: 30 } as const;
 
 // Motion
 const FRICTION = 0.98; // velocity kept per 60fps frame
@@ -28,7 +25,7 @@ const RELAX_DELAY = 4000; // ms after the last tap/release before returning to b
 const RESPAWN_DELAY = 4000;
 const POP_PUSH = 28; // px per frame at the popped bubble's edge
 
-type Bubble = { key: string; skill?: Skill; diameter: number; color: string };
+type Bubble = { skill: Skill; diameter: number; color: string };
 
 type Body = {
   x: number;
@@ -57,19 +54,11 @@ type Drag = {
   holdY: number;
 };
 
-const bubbles: Bubble[] = [
-  ...skills.map((skill) => ({
-    key: skill.name,
-    skill,
-    diameter: DIAMETER[skill.size],
-    color: skill.color,
-  })),
-  ...PLACEHOLDER_DIAMETERS.map((diameter, i) => ({
-    key: `placeholder-${i}`,
-    diameter,
-    color: i % 2 ? "var(--color-navy-100)" : "var(--color-navy-200)",
-  })),
-];
+const bubbles: Bubble[] = skills.map((skill) => ({
+  skill,
+  diameter: DIAMETER[skill.size],
+  color: skill.color,
+}));
 
 /** Push two overlapping bodies apart, weighted by inverse mass. */
 function separate(a: Body, b: Body, ia: number, ib: number, gap = 0) {
@@ -439,11 +428,11 @@ export default function Skills() {
           ref={containerRef}
           className="relative mt-8 h-[420px] rounded-2xl border border-navy-100 bg-navy-50 sm:h-[560px]"
         >
-          {bubbles.map(({ key, skill, color }, i) => {
-            const Icon = skill?.icon;
+          {bubbles.map(({ skill, color }, i) => {
+            const Icon = skill.icon;
             return (
               <div
-                key={key}
+                key={skill.name}
                 ref={(el) => {
                   bubbleRefs.current[i] = el;
                 }}
@@ -457,14 +446,10 @@ export default function Skills() {
                   ready ? "opacity-100" : "opacity-0"
                 }`}
               >
-                {Icon && skill && (
-                  <>
-                    <Icon size="1em" color={skill.iconColor} className="pointer-events-none" />
-                    <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-navy-900 px-2.5 py-1 text-sm font-medium text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100 group-data-[dragging=true]:opacity-100">
-                      {skill.name}
-                    </span>
-                  </>
-                )}
+                <Icon size="1em" color={skill.iconColor} className="pointer-events-none" />
+                <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-navy-900 px-2.5 py-1 text-sm font-medium text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100 group-data-[dragging=true]:opacity-100">
+                  {skill.name}
+                </span>
               </div>
             );
           })}

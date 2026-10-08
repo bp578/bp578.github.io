@@ -52,4 +52,10 @@
   html {
     @apply bg-white text-navy-900 antialiased;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }

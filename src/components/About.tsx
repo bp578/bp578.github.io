@@ -1,7 +1,7 @@
 export default function About() {
     return (
       <section
-        id="home"
+        id="about"
         className="flex min-h-svh items-center px-6 py-16 sm:px-10"
       >
         <div className="mx-auto w-full max-w-4xl">
