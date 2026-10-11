@@ -3,7 +3,7 @@
 Personal portfolio built with Next.js (App Router), React, TypeScript, and Tailwind CSS, statically exported to GitHub Pages.
 
 ## Quick Start
-VISIT HERE: [bp578.github.io](bp578.github.io)
+VISIT HERE: [bp578.github.io](https://bp578.github.io/)
 
 ## Develop
 
